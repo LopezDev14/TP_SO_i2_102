@@ -2,3 +2,39 @@ Equipo 102
 
 Beta : Lopez Lautaro Matias
 ALFA : Chavez Lautaro
+
+a: Se debe vincular el repositorio original agregandolo como remoto "upstream" con el comando:
+git remote add upstream <URL_REPO_ORIGINAL>
+Luego se descargan y fusionan los cambios ejecutando:
+git fetch upstream
+git merge upstream/main
+Y finalmente se sube la actualizacion al fork propio con:
+git push origin main
+
+b: Si. ALFA puede agregar el repositorio fork de GAMMA como un remoto adicional ejecutando:
+git remote add gamma <URL_FORK_GAMMA>
+Luego descarga y fusiona sus cambios con:
+git fetch gamma
+git merge gamma/main
+git push origin main
+
+
+e: ALFA realiza el FORK del repositorio de BETA en GitHub, clona su repositorio localmente, edita fork.txt con su Nombre, Apellido, IP y Hora, y realiza el push.
+git clone https://github.com/lautychavez2016-hash/TP_SO_i2_102.git
+cd TP_SO_i2_102
+git add fork.txt
+git commit -m "ALFA: Agrega datos en fork.txt"
+git push origin main
+
+ALFA actualiza su FORK vinculando el remoto upstream de BETA, descargando los cambios, realizando el merge e integrando NuevoDato.txt a su repositorio.
+git remote add upstream https://github.com/LopezDev14/TP_SO_i2_102.git
+git fetch upstream
+git merge upstream/main
+git push origin main
+
+ALFA descarga las actualizaciones de upstream, edita el archivo respuesta_i2_equipo102.txt agregando las respuestas a, b y e (listado completo de comandos) y sube la versión final a su fork.
+git fetch upstream
+git merge upstream/main
+git add respuesta_i2_equipo102.txt
+git commit -m "ALFA: Finaliza archivo de respuestas"
+git push origin main
