@@ -19,7 +19,28 @@ git merge gamma/main
 git push origin main
 
 
-e: ALFA realiza el FORK del repositorio de BETA en GitHub, clona su repositorio localmente, edita fork.txt con su Nombre, Apellido, IP y Hora, y realiza el push.
+c) si, puede hacerlo si tiene acceso al repositorio de ALFA
+
+d) no , no se pierden
+
+
+e: 
+
+BETA:
+crear el repositorio en GitHub con README.
+crear fork.txt.
+
+git clone https://github.com/LopezDev14/TP_SO_i2_102.git
+cd TP_SO_i2_Equipo
+touch NuevoDato.txt
+git add NuevoDato.txt
+git commit -m "Agrego NuevoDato.txt"
+git push
+
+
+
+
+ALFA realiza el FORK del repositorio de BETA en GitHub, clona su repositorio localmente, edita fork.txt con su Nombre, Apellido, IP y Hora, y realiza el push.
 git clone https://github.com/lautychavez2016-hash/TP_SO_i2_102.git
 cd TP_SO_i2_102
 git add fork.txt
